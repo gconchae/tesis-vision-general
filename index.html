@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Del Goteo a la Conciencia: Un Ecosistema Digital de Tesis</title>
+
+    <!-- SEO y Metaetiquetas para compartir -->
+    <meta name="description" content="Un Ecosistema Digital para Explorar la Tesis 'Impacto de la integración curricular de contenidos ambientales en la conciencia ecológica de estudiantes de octavo grado'.">
+    <meta property="og:title" content="Del Goteo a la Conciencia: Un Ecosistema Digital de Tesis">
+    <meta property="og:description" content="Un Ecosistema Digital para Explorar la Tesis sobre conciencia ecológica.">
+    <meta property="og:type" content="website">
+
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -15,138 +22,43 @@
             --accent-orange: #e67e22;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-        body {
-            background-color: #f5f7fa;
-            color: #333;
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.95));
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-            border-radius: 0 0 20px 20px;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            animation: fadeInDown 1s ease-out;
-        }
-        .hero .subtitle {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            animation: fadeInUp 1s ease-out 0.3s;
-            animation-fill-mode: both;
-        }
+        body { background-color: #f5f7fa; color: #333; line-height: 1.7; }
         
-        /* Section Styling */
-        section {
-            padding: 60px 0;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--secondary-color);
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
+        /* --- Barra de Navegación Unificada --- */
+        .main-nav { background-color: #fff; border-bottom: 2px solid var(--light-color); position: sticky; top: 0; left: 0; width: 100%; z-index: 1001; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; height: 60px; }
+        .nav-container strong { color: var(--primary-color); margin-right: 20px; font-size: 1rem; }
+        .main-nav a { color: var(--dark-color); text-decoration: none; padding: 10px 15px; border-radius: 6px; font-weight: 600; transition: all 0.2s ease; }
+        .main-nav a:hover { background-color: var(--light-color); color: var(--secondary-color); }
+        .main-nav a.active { color: var(--secondary-color); background-color: #e8f4fc; }
 
-        /* Components Grid */
-        .components-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        .component-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        .component-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-        }
-        .card-header {
-            padding: 25px;
-            border-left: 8px solid var(--secondary-color);
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        .hero { background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.95)); color: white; text-align: center; padding: 80px 20px; border-radius: 0 0 20px 20px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; animation: fadeInDown 1s ease-out; }
+        .hero .subtitle { font-size: 1.3rem; opacity: 0.9; max-width: 800px; margin: 0 auto 30px; animation: fadeInUp 1s ease-out 0.3s; animation-fill-mode: both; }
+        
+        section { padding: 60px 0; }
+        .section-title { text-align: center; font-size: 2.2rem; color: var(--primary-color); margin-bottom: 40px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--secondary-color); margin: 10px auto 0; border-radius: 2px; }
+
+        .components-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+        .component-card { background: white; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; display: flex; flex-direction: column; overflow: hidden; }
+        .component-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); }
+        .card-header { padding: 25px; border-left: 8px solid var(--secondary-color); }
         .card-header-thesis { border-left-color: var(--dark-color); }
         .card-header-concepts { border-left-color: var(--accent-red); }
         .card-header-tools { border-left-color: var(--accent-purple); }
         
-        .card-header .icon {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-        .card-header h3 {
-            font-size: 1.6rem;
-            color: var(--primary-color);
-        }
-        .card-body {
-            padding: 0 25px 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .card-body p {
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-        .card-body .audience {
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            background: #f8f9fa;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 25px;
-        }
-        .card-button {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .card-button:hover {
-            background-color: #2980b9;
-            transform: scale(1.05);
-        }
+        .card-header .icon { width: 50px; height: 50px; margin-bottom: 15px; color: var(--primary-color); }
+        .card-header h3 { font-size: 1.6rem; color: var(--primary-color); }
+        .card-body { padding: 0 25px 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-body p { margin-bottom: 20px; flex-grow: 1; }
+        .card-body .audience { font-size: 0.9rem; color: #7f8c8d; background: #f8f9fa; padding: 10px; border-radius: 8px; margin-bottom: 25px; }
+        .card-button { display: inline-block; background-color: var(--secondary-color); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; text-align: center; transition: all 0.3s ease; }
+        .card-button:hover { background-color: #2980b9; transform: scale(1.05); }
         .btn-thesis { background-color: var(--dark-color); }
         .btn-thesis:hover { background-color: var(--primary-color); }
         .btn-concepts { background-color: var(--accent-red); }
@@ -154,31 +66,55 @@
         .btn-tools { background-color: var(--accent-purple); }
         .btn-tools:hover { background-color: #8e44ad; }
 
-        /* Footer */
-        footer {
-            background: var(--dark-color);
-            color: var(--light-color);
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
+        /* --- Estilos para el Índice General --- */
+        #master-index { background-color: #ffffff; padding: 60px 20px; border-radius: 20px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); }
+        .index-list {
+            columns: 3;
+            column-gap: 40px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        footer a {
-            color: var(--secondary-color);
+        .index-list li {
+            margin-bottom: 15px;
+            break-inside: avoid-column; /* Evita que los items se rompan entre columnas */
+        }
+        .index-list a {
+            color: var(--dark-color);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        .index-list a:hover {
+            color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
         }
 
-        /* Animations */
+        footer { background: var(--dark-color); color: var(--light-color); text-align: center; padding: 30px 20px; margin-top: 40px; }
+        footer a { color: var(--secondary-color); text-decoration: none; font-weight: bold; }
+
         @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
+        @media (max-width: 900px) { .index-list { columns: 2; } }
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .hero .subtitle { font-size: 1.1rem; }
+            .index-list { columns: 1; }
         }
     </style>
 </head>
 <body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <strong>Proyecto de Tesis:</strong>
+            <a href="https://gconchae.github.io/tesis-vision-general/" class="active" title="Sobre el Proyecto">Visión General</a> 
+            <a href="https://gconchae.github.io/conceptos-y-hallazgos/" title="Explora la narrativa y los hallazgos">Conceptos y Hallazgos</a>
+            <a href="https://gconchae.github.io/herramientas-estadisticas-tesis/" title="Explora la metodología y estadística">Herramientas Estadísticas</a>
+            <a href="https://gconchae.github.io/tesis-vision-general/tesis-doctoral.pdf" target="_blank" title="Descargar la tesis completa en PDF">Ver la Tesis (PDF)</a>
+        </div>
+    </nav>
 
     <header class="hero">
         <div class="container">
@@ -197,8 +133,6 @@
             <section id="components">
                 <h2 class="section-title">Explora los Componentes</h2>
                 <div class="components-grid">
-                    
-                    <!-- Card 1: La Tesis -->
                     <article class="component-card">
                         <div class="card-header card-header-thesis">
                             <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM16 18H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
@@ -207,12 +141,9 @@
                         <div class="card-body">
                             <p>El documento académico completo. Contiene el análisis en profundidad, la revisión de literatura, el detalle metodológico y la fundamentación teórica completa de la investigación.</p>
                             <div class="audience"><strong>Ideal para:</strong> Académicos, jurados y quienes buscan el máximo nivel de detalle y rigor científico.</div>
-                            <!-- REEMPLAZAR CON TU URL -->
-                            <a href="#" target="_blank" class="card-button btn-thesis">Explorar la Tesis (PDF)</a>
+                            <a href="https://gconchae.github.io/tesis-vision-general/tesis-doctoral.pdf" target="_blank" class="card-button btn-thesis">Explorar la Tesis (PDF)</a>
                         </div>
                     </article>
-                    
-                    <!-- Card 2: Conceptos y Hallazgos -->
                     <article class="component-card">
                         <div class="card-header card-header-concepts">
                             <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
@@ -224,11 +155,9 @@
                             <a href="https://gconchae.github.io/conceptos-y-hallazgos/" class="card-button btn-concepts">Explorar la Narrativa</a>
                         </div>
                     </article>
-                    
-                    <!-- Card 3: Herramientas Estadísticas -->
                     <article class="component-card">
                         <div class="card-header card-header-tools">
-                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
                             <h3>Herramientas Estadísticas<br>(El Motor)</h3>
                         </div>
                         <div class="card-body">
@@ -237,9 +166,17 @@
                             <a href="https://gconchae.github.io/herramientas-estadisticas-tesis/" class="card-button btn-tools">Explorar las Herramientas</a>
                         </div>
                     </article>
-
                 </div>
             </section>
+            
+            <!-- >>> INICIO DE LA NUEVA SECCIÓN: ÍNDICE GENERAL <<< -->
+            <section id="master-index">
+                <h2 class="section-title">Índice General de Contenidos</h2>
+                <ul id="masterIndexList" class="index-list">
+                    <!-- El contenido se generará aquí con JavaScript -->
+                </ul>
+            </section>
+            <!-- >>> FIN DE LA NUEVA SECCIÓN <<< -->
 
             <section id="purpose">
                 <div class="container" style="text-align: center;">
@@ -254,13 +191,13 @@
         <div class="container">
             <p>Proyecto de Tesis Doctoral de Rafael Concha Escobar (2025).<br>Universidad Cuauhtémoc, Aguascalientes.</p>
             <p>Este ecosistema digital fue desarrollado para promover una ciencia más abierta, transparente y pedagógica.<br>
-            <!-- REEMPLAZAR CON TU URL -->
             <a href="#" target="_blank">Ver el Repositorio en GitHub</a></p>
         </div>
     </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Animación para las tarjetas
             const cards = document.querySelectorAll('.component-card');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -271,12 +208,79 @@
                     }
                 });
             }, { threshold: 0.1 });
+            cards.forEach(card => observer.observe(card));
 
-            cards.forEach(card => {
-                observer.observe(card);
-            });
+            // Lógica para generar el Índice General
+            const masterIndexData = [
+                // Datos de la app "Conceptos y Hallazgos"
+                { title: 'Resumen Ejecutivo (Abstract)', id: 'resumen_ejecutivo', app: 'concepts' },
+                { title: 'La Llave Rota', id: 'el_problema', app: 'concepts' },
+                { title: 'Hipótesis y Objetivos', id: 'la_pregunta', app: 'concepts' },
+                { title: '¿Qué Encontramos? (Resultados)', id: 'los_resultados', app: 'concepts' },
+                { title: '¿Qué Significa Todo? (Discusión)', id: 'la_discusion', app: 'concepts' },
+                { title: 'Diálogo con Otros Autores', id: 'estado_del_arte', app: 'concepts' },
+                { title: 'Vygotsky', id: 'vygotsky', app: 'concepts' },
+                { title: 'Kolb', id: 'kolb', app: 'concepts' },
+                { title: 'Educación para la Sostenibilidad (EpS)', id: 'eps', app: 'concepts' },
+                { title: 'La Salida de Campo', id: 'intervencion_semana2', app: 'concepts' },
+                { title: 'El Debate Energético', id: 'intervencion_semana4', app: 'concepts' },
+                { title: 'El Reto Domiciliario', id: 'intervencion_semana6', app: 'concepts' },
+                { title: 'Efecto de Preservación Actitudinal (EPA)', id: 'epa', app: 'concepts' },
+                { title: 'La Brecha Actitud-Conducta', id: 'brecha', app: 'concepts' },
+                { title: 'El Desafío de Medir el Saber', id: 'falla_psicometrica', app: 'concepts' },
+                { title: '¿Qué Puedo Hacer Mañana? (Docentes)', id: 'para_docentes', app: 'concepts' },
+                { title: 'La Hoja de Ruta (Instituciones)', id: 'para_instituciones', app: 'concepts' },
+                { title: '¿Cuáles son los Siguientes Pasos? (Investigación)', id: 'proyecciones_futuras', app: 'concepts' },
+                { title: 'Conciencia Ecológica (3D)', id: 'conciencia_ecologica', app: 'concepts' },
+                { title: 'Integración Curricular', id: 'integracion_curricular', app: 'concepts' },
+                
+                // Datos de la app "Herramientas Estadísticas"
+                { title: 'Estadísticos Descriptivos', id: 'descriptives', app: 'tools' },
+                { title: 'Naturaleza de los Datos (Escala Ordinal)', id: 'ordinal_data', app: 'tools' },
+                { title: 'Prueba de Normalidad (Shapiro-Wilk)', id: 'normality', app: 'tools' },
+                { title: 'Validación del Tamaño Muestral', id: 'sample_size', app: 'tools' },
+                { title: 'La Muestra del Estudio (n=89)', id: 'muestra_estudio', app: 'tools' },
+                { title: 'Fidelidad de Intervención', id: 'fidelity', app: 'tools' },
+                { title: 'El Instrumento de Medición (ECA Adaptada)', id: 'instrumento-eca', app: 'tools' },
+                { title: 'Revisión por Expertos (Validez de Contenido)', id: 'content-validity', app: 'tools' },
+                { title: 'Coherencia de Preguntas (Fiabilidad)', id: 'internal-consistency', app: 'tools' },
+                { title: 'Validación de Estructura (AFC)', id: 'factor-analysis', app: 'tools' },
+                { title: 'Comparando Grupos (U de Mann-Whitney)', id: 'mann-whitney', app: 'tools' },
+                { title: 'Midiendo el Cambio (Prueba de Wilcoxon)', id: 'wilcoxon', app: 'tools' },
+                { title: 'Control de Calidad (Kruskal-Wallis)', id: 'kruskal-wallis', app: 'tools' },
+                { title: 'Investigación a Fondo (Prueba de Dunn)', id: 'dunn', app: 'tools' },
+                { title: 'Tamaño del Efecto (r de Rosenthal)', id: 'rosenthal', app: 'tools' },
+                { title: 'Verificación Robusta del Efecto (Delta de Cliff)', id: 'cliff', app: 'tools' },
+                { title: 'Tamaño del Efecto para Múltiples Grupos (ε²)', id: 'eta-squared', app: 'tools' },
+                { title: 'Formulario y Guía de Interpretación', id: 'formulas', app: 'tools' }
+            ];
+
+            // Ordenar los datos alfabéticamente por título
+            masterIndexData.sort((a, b) => a.title.localeCompare(b.title));
+
+            function renderMasterIndex() {
+                const list = document.getElementById('masterIndexList');
+                if (!list) return;
+
+                const baseUrls = {
+                    concepts: 'https://gconchae.github.io/conceptos-y-hallazgos/',
+                    tools: 'https://gconchae.github.io/herramientas-estadisticas-tesis/'
+                };
+                const paramNames = {
+                    concepts: 'concept',
+                    tools: 'tool'
+                };
+
+                masterIndexData.forEach(item => {
+                    const url = `${baseUrls[item.app]}?${paramNames[item.app]}=${item.id}`;
+                    const li = document.createElement('li');
+                    li.innerHTML = `<a href="${url}" target="_blank">${item.title}</a>`;
+                    list.appendChild(li);
+                });
+            }
+
+            renderMasterIndex();
         });
     </script>
-
 </body>
 </html>
