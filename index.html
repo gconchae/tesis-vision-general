@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Del Goteo a la Conciencia: Un Ecosistema Digital de Tesis</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+            --accent-red: #e74c3c;
+            --accent-purple: #8e44ad;
+            --accent-orange: #e67e22;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.95));
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            border-radius: 0 0 20px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            animation: fadeInDown 1s ease-out;
+        }
+        .hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            animation: fadeInUp 1s ease-out 0.3s;
+            animation-fill-mode: both;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Components Grid */
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .component-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .component-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+        .card-header {
+            padding: 25px;
+            border-left: 8px solid var(--secondary-color);
+        }
+        .card-header-thesis { border-left-color: var(--dark-color); }
+        .card-header-concepts { border-left-color: var(--accent-red); }
+        .card-header-tools { border-left-color: var(--accent-purple); }
+        
+        .card-header .icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        .card-header h3 {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+        }
+        .card-body {
+            padding: 0 25px 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body p {
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .card-body .audience {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        .card-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .card-button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+        .btn-thesis { background-color: var(--dark-color); }
+        .btn-thesis:hover { background-color: var(--primary-color); }
+        .btn-concepts { background-color: var(--accent-red); }
+        .btn-concepts:hover { background-color: #c0392b; }
+        .btn-tools { background-color: var(--accent-purple); }
+        .btn-tools:hover { background-color: #8e44ad; }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero .subtitle { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Del Goteo a la Conciencia</h1>
+            <p class="subtitle">Un Ecosistema Digital para Explorar la Tesis "Impacto de la integración curricular de contenidos ambientales en la conciencia ecológica de estudiantes de octavo grado".</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="about-project">
+                <h2 class="section-title">¿Qué es este Proyecto?</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto;">Este proyecto traduce una rigurosa investigación académica en un formato interactivo y accesible. Partiendo de la analogía de una "llave rota" que gotea indiferencia, exploramos cómo una intervención pedagógica puede cultivar una "mirada" más consciente y responsable en los estudiantes. El ecosistema se compone de tres artefactos diseñados para diferentes audiencias y niveles de profundidad.</p>
+            </section>
+
+            <section id="components">
+                <h2 class="section-title">Explora los Componentes</h2>
+                <div class="components-grid">
+                    
+                    <!-- Card 1: La Tesis -->
+                    <article class="component-card">
+                        <div class="card-header card-header-thesis">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM16 18H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                            <h3>La Tesis<br>(El Fundamento)</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>El documento académico completo. Contiene el análisis en profundidad, la revisión de literatura, el detalle metodológico y la fundamentación teórica completa de la investigación.</p>
+                            <div class="audience"><strong>Ideal para:</strong> Académicos, jurados y quienes buscan el máximo nivel de detalle y rigor científico.</div>
+                            <!-- REEMPLAZAR CON TU URL -->
+                            <a href="#" target="_blank" class="card-button btn-thesis">Explorar la Tesis (PDF)</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Card 2: Conceptos y Hallazgos -->
+                    <article class="component-card">
+                        <div class="card-header card-header-concepts">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            <h3>Conceptos y Hallazgos<br>(La Narrativa)</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Una guía interactiva que cuenta la historia de la investigación. Explora el <strong>qué</strong> y el <strong>porqué</strong> de los hallazgos de una manera visual y accesible, conectando la teoría con los resultados.</p>
+                            <div class="audience"><strong>Ideal para:</strong> Estudiantes, educadores y cualquier persona interesada en la historia y las conclusiones del estudio.</div>
+                            <a href="https://gconchae.github.io/conceptos-y-hallazgos/" class="card-button btn-concepts">Explorar la Narrativa</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Card 3: Herramientas Estadísticas -->
+                    <article class="component-card">
+                        <div class="card-header card-header-tools">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+                            <h3>Herramientas Estadísticas<br>(El Motor)</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Un manual detallado del <strong>cómo</strong> metodológico. Explica cada decisión y procedimiento estadístico que sustenta la validez y el rigor de los resultados presentados en la tesis.</p>
+                            <div class="audience"><strong>Ideal para:</strong> Investigadores, estudiantes de metodología y quienes deseen replicar o entender el análisis.</div>
+                            <a href="https://gconchae.github.io/herramientas-estadisticas-tesis/" class="card-button btn-tools">Explorar las Herramientas</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="purpose">
+                <div class="container" style="text-align: center;">
+                    <h2 class="section-title">Nuestra Filosofía: Ciencia Abierta y Pedagógica</h2>
+                    <p style="max-width: 800px; margin: 0 auto;">La investigación académica no debería vivir aislada en documentos densos. Este proyecto es un experimento en <strong>comunicación científica transparente</strong>. Creemos que al traducir el rigor metodológico y los hallazgos conceptuales a formatos interactivos, podemos construir un puente entre la academia y la práctica, haciendo el conocimiento más accesible, verificable y útil para todos.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Proyecto de Tesis Doctoral de Rafael Concha Escobar (2025).<br>Universidad Cuauhtémoc, Aguascalientes.</p>
+            <p>Este ecosistema digital fue desarrollado para promover una ciencia más abierta, transparente y pedagógica.<br>
+            <!-- REEMPLAZAR CON TU URL -->
+            <a href="#" target="_blank">Ver el Repositorio en GitHub</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cards = document.querySelectorAll('.component-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = `fadeInUp 1s ease-out 0.3s`;
+                        entry.target.style.animationFillMode = 'both';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+
+</body>
+</html>
