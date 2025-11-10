@@ -169,14 +169,12 @@
                 </div>
             </section>
             
-            <!-- >>> INICIO DE LA NUEVA SECCIÓN: ÍNDICE GENERAL <<< -->
             <section id="master-index">
                 <h2 class="section-title">Índice General de Contenidos</h2>
                 <ul id="masterIndexList" class="index-list">
                     <!-- El contenido se generará aquí con JavaScript -->
                 </ul>
             </section>
-            <!-- >>> FIN DE LA NUEVA SECCIÓN <<< -->
 
             <section id="purpose">
                 <div class="container" style="text-align: center;">
@@ -197,7 +195,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Animación para las tarjetas
             const cards = document.querySelectorAll('.component-card');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -210,7 +207,6 @@
             }, { threshold: 0.1 });
             cards.forEach(card => observer.observe(card));
 
-            // Lógica para generar el Índice General
             const masterIndexData = [
                 // Datos de la app "Conceptos y Hallazgos"
                 { title: 'Resumen Ejecutivo (Abstract)', id: 'resumen_ejecutivo', app: 'concepts' },
@@ -233,6 +229,9 @@
                 { title: '¿Cuáles son los Siguientes Pasos? (Investigación)', id: 'proyecciones_futuras', app: 'concepts' },
                 { title: 'Conciencia Ecológica (3D)', id: 'conciencia_ecologica', app: 'concepts' },
                 { title: 'Integración Curricular', id: 'integracion_curricular', app: 'concepts' },
+                // --- NUEVAS ENTRADAS AÑADIDAS AQUÍ ---
+                { title: 'Modelo Tridimensional (Hungerford y Volk)', id: 'modelo_tridimensional', app: 'concepts' },
+                { title: 'El Poder de la Experiencia Directa (Pirchio et al.)', id: 'pirchio_experiencia_directa', app: 'concepts' },
                 
                 // Datos de la app "Herramientas Estadísticas"
                 { title: 'Estadísticos Descriptivos', id: 'descriptives', app: 'tools' },
@@ -255,7 +254,6 @@
                 { title: 'Formulario y Guía de Interpretación', id: 'formulas', app: 'tools' }
             ];
 
-            // Ordenar los datos alfabéticamente por título
             masterIndexData.sort((a, b) => a.title.localeCompare(b.title));
 
             function renderMasterIndex() {
